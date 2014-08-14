@@ -13,7 +13,7 @@
     <control controlID="2" controlTypeID="com.balsamiq.mockups::DataGrid" x="411" y="205" w="-1" h="-1" measuredW="662" measuredH="171" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <align>center</align>
-        <text>Num.Pedido%2CName%5E%2CINfo.Itens%20%5Ev%2C%20Endere%E7o%2C%20Total%28R%24%29%2CSelect%0A0001%2CGiacomo%20Guilizzoni%2C%202%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C%2024.90%2C%5Bo%5D%0A0002%2CMarco%20Botton%2C%203%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C32.00%20%2C%5B%5D%0A0003%2CMariah%20Maclachlan%2C%207%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C%2040.00%2C%5B%5D%0A0004%2CValerie%20Liberty%2C%202%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C%2025.50%2C%5B%5D%0A0005%2CGuido%20Jack%20Guilizzoni%2C%204%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C45.00%20%2C%5B%5D</text>
+        <text>Num.Pedido%2CName%5E%2CINfo.Itens%20%5Ev%2C%20Endere%E7o%2C%20Total%28R%24%29%2CSelect%0A0001%2CGiacomo%20Guilizzoni%2C%20pizza%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C%2024.90%2C%5Bo%5D%0A0002%2CMarco%20Botton%2C%20Xsalada%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C32.00%20%2C%5B%5D%0A0003%2CMariah%20Maclachlan%2C%20Pizza%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C%2040.00%2C%5B%5D%0A0004%2CValerie%20Liberty%2C%20Pastel%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C%2025.50%2C%5B%5D%0A0005%2CGuido%20Jack%20Guilizzoni%2C%20Pizza%2C%20R%20Alexandre%20Amorim%20n422%20-%20Aparecida%2C45.00%20%2C%5B%5D</text>
       </controlProperties>
     </control>
     <control controlID="3" controlTypeID="com.balsamiq.mockups::PointyButton" x="1080" y="349" w="-1" h="-1" measuredW="110" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
@@ -154,10 +154,10 @@
         <text>Prox.%20Igreja%20da%20Aparecida</text>
       </controlProperties>
     </control>
-    <control controlID="30" controlTypeID="com.balsamiq.mockups::SubTitle" x="920" y="435" w="-1" h="-1" measuredW="66" measuredH="19" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::SubTitle" x="920" y="435" w="-1" h="-1" measuredW="69" measuredH="19" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <size>16</size>
-        <text>List%20Item</text>
+        <text>List%20Item%3A</text>
       </controlProperties>
     </control>
     <control controlID="31" controlTypeID="com.balsamiq.mockups::DataGrid" x="920" y="452" w="264" h="233" measuredW="258" measuredH="261" zOrder="26" locked="false" isInGroup="-1">
@@ -175,6 +175,24 @@
     <control controlID="33" controlTypeID="com.balsamiq.mockups::TextArea" x="440" y="585" w="465" h="100" measuredW="200" measuredH="140" zOrder="28" locked="false" isInGroup="-1">
       <controlProperties>
         <text>sem%20cebola</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::SubTitle" x="411" y="391" w="-1" h="-1" measuredW="53" measuredH="21" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Editar%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::StickyNote" x="170" y="440" w="172" h="90" measuredW="109" measuredH="123" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20comment%20Informa%E7oes%20ou%20Editar%20de%20acordo%20com%20a%20Op%E7ao%20escolhida</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Arrow" x="250" y="400" w="161" h="52" measuredW="150" measuredH="100" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <rightArrow>false</rightArrow>
+        <stroke>dotted</stroke>
       </controlProperties>
     </control>
   </controls>
