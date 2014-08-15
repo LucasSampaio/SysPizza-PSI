@@ -255,5 +255,11 @@
         <text>sabor</text>
       </controlProperties>
     </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Button" x="1305" y="482" w="49" h="20" measuredW="47" measuredH="27" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>9</size>
+        <text>Editar</text>
+      </controlProperties>
+    </control>
   </controls>
 </mockup>
