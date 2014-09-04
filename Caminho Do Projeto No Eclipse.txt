@@ -1,6 +1,0 @@
-caminho para ADD o projeto no Eclipse(mobile)
-C:\Users\Lucas\Documents\GitHub\SysPizza-PSI\CodigoFonte\Mobile
-
-caminho para ADD o projeto no Eclipse(Web)
-C:\Users\Lucas\Documents\GitHub\SysPizza-PSI\CodigoFonte\Web
-

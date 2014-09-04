@@ -1,0 +1,66 @@
+package br.com.calculadora;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.*;
+import android.view.*;
+
+
+public class CalculadoraActivity extends ActionBarActivity {
+
+	EditText etNum01, etNum02, etResultado;
+	double varNum01,varNum02,varResultado;
+	Button btSomar;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_calculadora);
+        
+        etNum01 = (EditText) findViewById(R.id.etNum01);
+        etNum02 = (EditText) findViewById(R.id.etNum02);
+        etResultado = (EditText) findViewById(R.id.etResultado);
+        
+        btSomar = (Button) findViewById(R.id.btnSomar);
+        btSomar.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				varNum01 = Double.parseDouble(etNum01.getText().toString());
+				varNum02 = Double.parseDouble(etNum02.getText().toString());
+				if (varNum01 == null && varNum02 == null) {
+					varResultado = varNum01 + varNum02;
+					etResultado.setText("Nenhum valor digitado!");
+				}
+				varResultado = varNum01 + varNum02;
+				
+				etResultado.setText(String.valueOf(varResultado));
+				
+			}
+		});
+        
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.calculadora, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
