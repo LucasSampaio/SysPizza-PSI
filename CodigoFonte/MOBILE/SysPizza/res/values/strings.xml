@@ -2,9 +2,7 @@
 <resources>
 
     <string name="app_name">SysPizza</string>
-    <string name="etLogin">Login</string>
-    <string name="etSenha">Senha</string>
-    <string name="btnEntrar">Entrar</string>
+    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
 </resources>
