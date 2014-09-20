@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui" >
+	<!-- Uso de Tags JSF: Arvore de componente -->
+	
+	<f:view contentType="text/html"/>
+	<h:head>
+	<title>Notas fiscais</title>
+	</h:head>
+	<h:outputText value="Sistema SYS-Pizza 1.0" />
+	<h:body align="center">
+	
+	<div align="center" style="margin-top:100px">
+	<h:form id="form">
+	
+	<p:panel id="panel" header="Cadastrar Cliente"/>
+	
+	
+	<h:panelGrid columns="2">
+		
+		<h:outputText  value="Nome"/>
+		<p:inputText id="nome" value="" />
+		
+		<h:outputText  value="RG"/>
+		<p:inputText id="rg" value="" />
+		
+		<h:outputText  value="Cpf"/>
+		<p:inputText id="cpf" value="" />
+		
+		<h:outputText  value="Telefone"/>
+		<p:inputText id="Telefone" value="" />
+		
+		<h:outputText  value="Endereco"/>
+		<p:inputText id="endereco" value="" />
+				
+	</h:panelGrid>
+	
+	<p:commandButton id="cadastrar" value="Cadastrar"/>
+	
+	<p:panel id="panel2" header=""/>
+	</h:form>
+</div>
+		
+	</h:body>
+</html>
