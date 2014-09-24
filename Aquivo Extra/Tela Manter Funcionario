@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" >
+      
+	<!-- Uso de Tags JSF: Arvore de componente -->
+	<div align="center">
+	<h:graphicImage library="imagens" name="logo.png" id="imagem" style=" width: 550px;" /><f:view contentType="text/html"/>
+	</div>
+	<h:head>	
+		
+		<h:outputStylesheet library="css" name="style.css" />
+		<title >Cadastrar Funcionario</title>
+	
+	</h:head>
+	
+	<h:body align="center">
+	
+	
+	
+	
+<div align="center">
+	<h:form id="form">
+	
+	<p:panel id="panel" header="Cadastrar Funcionario">
+	
+	<div id="espaco">
+	<h:panelGrid columns="2">
+		
+		<h:outputText  value="Nome Completo"/>
+		<p:inputText id="nome" value="" />
+		
+		<h:outputText  value="Login"/>
+		<p:inputText id="login" value="" />
+		
+		<h:outputText  value="Email"/>
+		<p:inputText id="email" value="" />
+		
+		<h:outputText  value="Senha"/>
+		<p:inputText id="senha" value="" />
+		
+		<h:outputText  value="Telefone"/>
+		<p:inputText id="telefone" value="" />
+		
+		<h:outputText  value="Setor"/>
+		<p:inputText id="setor" value="" />
+		
+		<h:outputText  value="Cargo"/>
+		<p:inputText id="cargo" value="" />
+			
+	</h:panelGrid>
+	<p:commandButton id="cadastrar" value="Cadastrar"/>
+	</div>
+	</p:panel>
+	
+	<p:panel id="panel2" header="">
+		<div align="center" style="font-size: x-small;">
+			<p>Copyright 2014. 
+				Todos os direitos reservados</p>
+		</div>
+	</p:panel>
+	</h:form>
+</div>
+	</h:body>
+
+</html>
