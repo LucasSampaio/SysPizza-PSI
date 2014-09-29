@@ -1099,14 +1099,14 @@ containing a value of this type.
         public static final int btAlterarItem=0x7f05004a;
         public static final int btBebidaEfetuarPedido=0x7f05003e;
         public static final int btDoceEfetuarPedido=0x7f05003f;
-        public static final int btEfetuarPedido=0x7f05004f;
-        public static final int btEntrar=0x7f05004e;
+        public static final int btEfetuarPedido=0x7f05004c;
+        public static final int btEntrar=0x7f050053;
         public static final int btFinalizarPedido=0x7f05004b;
-        public static final int btPerguntaESugestao=0x7f050051;
+        public static final int btPerguntaESugestao=0x7f05004e;
         public static final int btPizzaEfetuarPedido=0x7f05003d;
-        public static final int btSair=0x7f050052;
+        public static final int btSair=0x7f05004f;
         public static final int btSanduicheEfetuarPedido=0x7f050040;
-        public static final int btSolicitarReserva=0x7f050050;
+        public static final int btSolicitarReserva=0x7f05004d;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050028;
@@ -1115,8 +1115,8 @@ containing a value of this type.
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
-        public static final int etLogin=0x7f05004c;
-        public static final int etSenha=0x7f05004d;
+        public static final int etLogin=0x7f050051;
+        public static final int etSenha=0x7f050052;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int home=0x7f050014;
@@ -1149,7 +1149,7 @@ containing a value of this type.
         public static final int showTitle=0x7f050006;
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
-        public static final int tVNomeDoCliente=0x7f050053;
+        public static final int tVNomeDoCliente=0x7f050050;
         public static final int tabMode=0x7f050002;
         public static final int textView1=0x7f05003c;
         public static final int textView2=0x7f050041;
@@ -1217,9 +1217,11 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_efetuar_pedidos=0x7f030018;
-        public static final int activity_login=0x7f030019;
-        public static final int activity_menu_principal=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int activity_escolher_pizza=0x7f030019;
+        public static final int activity_login=0x7f03001a;
+        public static final int activity_menu_principal=0x7f03001b;
+        public static final int activity_reservar_mesa=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int menu_principal=0x7f0c0000;

@@ -26,8 +26,8 @@ public class MenuPrincipalActivity extends ActionBarActivity {
 			@Override
 			public void onClick(View v) {
 				setContentView(R.layout.activity_efetuar_pedidos);
-			}
-		});*/
+			}*/
+		});
 	}
 	
 	//----------------------------------------------------------------------------

@@ -9,25 +9,24 @@ import android.widget.Button;
 
 public class MenuPrincipalActivity extends ActionBarActivity {
 
-	Button btEntrar;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.activity_efetuar_pedidos);
-		chamaTelaDeLogin();
+		setContentView(R.layout.activity_efetuar_pedidos);
+		//chamaTelaDeLogin();
 	}
 	// CHAMA TELA DE LOGIN
 	public void chamaTelaDeLogin(){
-		setContentView(R.layout.activity_efetuar_pedidos);
+		setContentView(R.layout.activity_login);
 		
-		/* = (Button) findViewById(R.id.btEntrar);
+		Button btEntrar = (Button) findViewById(R.id.btEntrar);
 		btEntrar.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				setContentView(R.layout.activity_efetuar_pedidos);
 			}
-		});*/
+		});
 	}
 	
 	//----------------------------------------------------------------------------
