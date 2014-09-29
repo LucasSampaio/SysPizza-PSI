@@ -4,34 +4,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/etLogin"
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/tvTeste"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="70dp"
-        android:ems="10"
-        android:hint="Login" >
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="29dp"
+        android:text="Reserva de Mesa"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/etSenha"
-        android:layout_width="fill_parent"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/etLogin"
-        android:ems="10"
-        android:hint="Senha" />
-
-    <Button
-        android:id="@+id/btEntrar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/etSenha"
-        android:text="Entrar" />
+        android:layout_alignLeft="@+id/tvTeste"
+        android:layout_below="@+id/tvTeste"
+        android:layout_marginTop="26dp"
+        android:text="Mesas disponíveis" />
 
 </RelativeLayout>

@@ -9,7 +9,7 @@
     tools:context="br.com.syspizza.MenuPrincipalActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvTeste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/btSolicitarReserva"
         android:layout_alignRight="@+id/btPerguntaESugestao"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/tvTeste"
         android:layout_marginTop="90dp"
         android:text="Fazer pedido" />
 
@@ -57,7 +57,7 @@
         android:id="@+id/tVNomeDoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/tvTeste"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="NOME DO CLIENTE" />

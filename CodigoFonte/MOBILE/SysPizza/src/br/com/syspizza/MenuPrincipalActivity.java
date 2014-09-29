@@ -1,33 +1,60 @@
 package br.com.syspizza;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.*;
 
 public class MenuPrincipalActivity extends ActionBarActivity {
 
 	Button btEntrar;
+	EditText etLogin, etSenha;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//setContentView(R.layout.activity_efetuar_pedidos);
 		chamaTelaDeLogin();
 	}
+	
 	// CHAMA TELA DE LOGIN
 	public void chamaTelaDeLogin(){
-		setContentView(R.layout.activity_efetuar_pedidos);
+		setContentView(R.layout.activity_login);
 		
-		/* = (Button) findViewById(R.id.btEntrar);
+		etLogin = (EditText) findViewById(R.id.etLogin);
+		etSenha = (EditText) findViewById(R.id.etSenha);
+		
+		btEntrar = (Button) findViewById(R.id.btEntrar);
 		btEntrar.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				setContentView(R.layout.activity_efetuar_pedidos);
+				try{
+					
+					if( etLogin.getText().toString().equalsIgnoreCase("guilherme") && etSenha.getText().toString().equalsIgnoreCase("123")){
+						setContentView(R.layout.activity_menu_principal);
+					}
+					else{
+						mensagemExibir("Alerta !", "Erro de login e senha");
+					}
+				}
+				catch(Exception erro){
+					mensagemExibir("Alerta !", "O App encontro problemas na tela de autenticação");
+				}
 			}
-		});*/
+		});
+	}
+	
+public void mensagemExibir(String tituloAlerta, String mensagemAlerta){
+		
+		AlertDialog.Builder mensagem = new AlertDialog.Builder(MenuPrincipalActivity.this);
+		
+		mensagem.setTitle(tituloAlerta);
+		mensagem.setMessage(mensagemAlerta);
+		mensagem.setNeutralButton("Ok", null);
+		mensagem.show();
 	}
 	
 	//----------------------------------------------------------------------------
@@ -50,3 +77,4 @@ public class MenuPrincipalActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 }
+
