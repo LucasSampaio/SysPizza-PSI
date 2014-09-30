@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+	<h:head>
+ <title>Menu</title>
+ </h:head>
+ 
+ <h:body>
+ 
+ <h:form id ="form2" rendered="#{usuarioBean.rendermenu}" >
+ <p:menubar>
+ 
+ <p:submenu label="Cadastrar Usuario">
+ <p:menuitem value="Cliente" ajax="false" action="#{clienteBean.preparar}"/> 
+ <p:menuitem value="Funcionario" ajax="false" action="#{funcionarioBean.preparar}"/>
+ 
+ </p:submenu>
+ 
+ <p:submenu label="Pesquisar">
+ <p:menuitem value="Cliente" ajax="false" action="#{clienteBean.prepararPesquisa}"/>
+ <p:menuitem value="Funcionario" ajax="false" action="#{funcionarioBean.prepararPesquisa}"/>
+ <p:menuitem value="Item" ajax="false" action="#{itemBean.prepararPesquisa}"/>  
+ 
+ 
+ </p:submenu>
+ 
+  <p:submenu label="Cadastrar Item">
+ <p:menuitem value="Sabor" ajax="false" action="#{itemBean.prepararCadastro}"/>
+ <p:menuitem value="Bebida" ajax="false" action="#{itemBean.prepararCadastroBebida}"/>
+ <p:menuitem value="Sanduiche" ajax="false" action="#{itemBean.prepararCadastroSanduiche}"/>
+ <p:menuitem value="Doces" ajax="false" action="#{itemBean.prepararCadastroDoces}"/>
+ 
+ 
+ </p:submenu>
+ 
+ 
+ </p:menubar>
+ 
+ </h:form>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div align="center" style="margin-top:100px">
+	<h:form id="form" rendered="#{usuarioBean.renderlogin}">
+	
+	<p:panel id ="panel1" header="Login">
+	<h:panelGrid columns="2">
+		
+		<h:outputText  value="login: "/>
+		<p:inputText id="login" value="#{usuarioBean.usuario.login}" />
+		
+		<h:outputText  value="Senha: "/>
+		<p:inputText id="senha" value="#{usuarioBean.usuario.senha}" />
+		
+		
+		
+		</h:panelGrid>
+		
+		<p:commandButton id="btn" value="Login" update="form2, form" ajax="false" action="#{usuarioBean.pesquisarUsuario}"/>
+		</p:panel>
+		</h:form>
+		
+		
+		</div>
+ 
+ </h:body>
+ 
+	</html>

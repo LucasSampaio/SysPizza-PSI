@@ -5,5 +5,67 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
     version="2.0">
+    
+        
+    <navigation-rule>
+    
+    <from-view-id>/Menu/menu.xhtml </from-view-id>
+    <navigation-case>
+    <from-outcome>cadastrarCliente</from-outcome>
+    <to-view-id>/ManterCliente/cadastrar.xhtml </to-view-id>
+    </navigation-case>
+    
+    <navigation-case>
+    <from-outcome>cadastrarFuncionario</from-outcome>
+    <to-view-id>/ManterFuncionario/cadastrar.xhtml </to-view-id>
+    </navigation-case>
+    
+    <navigation-case>
+    <from-outcome>prepararPesquisa</from-outcome>
+    <to-view-id>/ManterCliente/pesquisar.xhtml </to-view-id>
+    </navigation-case>
+    
+     <navigation-case>
+    <from-outcome>cadastrarSabor</from-outcome>
+    <to-view-id>/ManterItem/cadastrarSabor.xhtml </to-view-id>
+    </navigation-case>
+    
+    <navigation-case>
+    <from-outcome>cadastrarBebida</from-outcome>
+    <to-view-id>/ManterItem/cadastrarBebida.xhtml </to-view-id>
+    </navigation-case>
+    
+    <navigation-case>
+    <from-outcome>cadastrarSanduiche</from-outcome>
+    <to-view-id>/ManterItem/cadastrarSanduiche.xhtml </to-view-id>
+    </navigation-case>
+    
+    <navigation-case>
+    <from-outcome>cadastrarDoce</from-outcome>
+    <to-view-id>/ManterItem/cadastrarDoces.xhtml </to-view-id>
+    </navigation-case>
+    
+      <navigation-case>
+    <from-outcome>prepararPesquisaItem</from-outcome>
+    <to-view-id>/ManterItem/pesquisarSabor.xhtml </to-view-id>
+    </navigation-case>
+    
+      <navigation-case>
+    <from-outcome>pesquisarFuncionario</from-outcome>
+    <to-view-id>/ManterFuncionario/pesquisar.xhtml </to-view-id>
+    </navigation-case>
+    
+    </navigation-rule>
+    
+    
+    
+    <navigation-rule>
+    <from-view-id>/ManterItem/pesquisarSabor.xhtml</from-view-id>
+     <navigation-case>
+    <from-outcome>alterarItem</from-outcome>
+    <to-view-id>/ManterItem/alterarItem.xhtml </to-view-id>
+    </navigation-case>
+    
+    </navigation-rule>
 
 </faces-config>

@@ -6,9 +6,9 @@
 	  xmlns:p="http://primefaces.org/ui" >
 	<!-- Uso de Tags JSF: Arvore de componente -->
 	
-	<f:view contentType="text/html"/>
+	
 	<h:head>
-	<title>Notas fiscais</title>
+	<title>SYS</title>
 	</h:head>
 	<h:outputText value="Sistema SYS-Pizza 1.0" />
 	<h:body align="center">
@@ -16,31 +16,33 @@
 	<div align="center" style="margin-top:100px">
 	<h:form id="form">
 	
-	<p:panel id="panel" header="Cadastrar Cliente"/>
+	<p:panel id="panel" header="Cadastrar Funcionario"/>
 	
 	
 	<h:panelGrid columns="2">
 		
 		<h:outputText  value="Nome"/>
-		<p:inputText id="nome" value="#{clienteBean.cliente.nome}" />
+		<p:inputText id="nome" value="#{funcionarioBean.funcionario.nome}" />
 		
-		<h:outputText  value="RG"/>
-		<p:inputText id="rg" value="#{clienteBean.cliente.rg}" />
+		<h:outputText  value="Rg"/>
+		<p:inputText id="rg" value="#{funcionarioBean.funcionario.rg}" />
 		
-		<h:outputText  value="Cpf"/>
-		<p:inputText id="cpf" value="#{clienteBean.cliente.cpf}" />
+		<h:outputText  value="CPF"/>
+		<p:inputText id="cpf" value="#{funcionarioBean.funcionario.cpf}" />
 		
 		<h:outputText  value="Telefone"/>
-		<p:inputText id="Telefone" value="#{clienteBean.cliente.telefone}" />
+		<p:inputText id="telefone" value="#{funcionarioBean.funcionario.telefone}" />
 		
 		<h:outputText  value="Endereco"/>
-		<p:inputText id="endereco" value="#{clienteBean.cliente.endereco}" />
+		<p:inputText id="endereco" value="#{funcionarioBean.funcionario.endereco}" />
+		
+		
 				
 	</h:panelGrid>
 	
-	<p:commandButton id="btn" value="Cadastrar" ajax="false" action="#{clienteBean.salvar}"/>
-		
-	<p:panel id="panel2" header=""/>
+	<p:commandButton id="btn" value="Cadastrar" ajax="false" action="#{funcionarioBean.salvar}"/>
+	
+	<p:panel id="panel2" header="teste"/>
 	</h:form>
 </div>
 		

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui" >
+	<!-- Uso de Tags JSF: Arvore de componente -->
+	
+	<f:view contentType="text/html"/>
+	<h:head>
+	<title>SYS</title>
+	</h:head>
+	<h:outputText value="Sistema SYS-Pizza 1.0" />
+	<h:body align="center">
+	
+	<div align="center" style="margin-top:100px">
+	<h:form id="form">
+	
+	<p:panel id="panel" header="Cadastrar Item"/>
+	
+	
+	<h:panelGrid columns="2">
+		
+		<h:outputText  value="Descrição"/>
+		<p:inputText id="descricao" value="#{itemBean.item.descricao}" />
+		
+		<h:outputText  value="Preço"/>
+		<p:inputText id="preco" value="#{itemBean.item.preco}" />
+		
+		<h:outputText  value="Quantidade"/>
+		<p:inputText id="quantidade" value="#{itemBean.item.quantidade}" />
+		
+				
+	</h:panelGrid>
+	
+	<p:selectOneRadio value="#{itemBean.item.tipo}">
+		<f:selectItem itemValue="1" itemLabel="Pizza" />
+		<f:selectItem itemValue="2" itemLabel="Bebida" />
+		<f:selectItem itemValue="3" itemLabel="Sanduiche" />
+		<f:selectItem itemValue="4" itemLabel="Doce" />	
+	
+	
+	</p:selectOneRadio>
+	
+	<p:commandButton id="btn" value="Cadastrar" ajax="false" action="#{itemBean.cadastrarItem}"/>
+		
+	<p:panel id="panel2" header=""/>
+	</h:form>
+</div>
+		
+	</h:body>
+</html>

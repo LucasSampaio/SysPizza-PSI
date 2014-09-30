@@ -60,7 +60,7 @@
 <session-timeout>15</session-timeout>
 </session-config>
 <welcome-file-list>
-<welcome-file>ManterCliente/cadastrar.xhtml</welcome-file>
+<welcome-file>Menu/menu.xhtml</welcome-file>
 </welcome-file-list>
 
   

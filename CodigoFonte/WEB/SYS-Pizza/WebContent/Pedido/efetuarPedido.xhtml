@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+	<!-- Uso de Tags JSF: Arvore de componente -->
+	
+	<f:view contentType="text/html"/>
+	<h:head>
+	<title>SYS</title>
+	</h:head>
+	<h:outputText value="Sistema SYS-Pizza" />
+	<h:body align="center">
+	
+	<div align="center" style="margin-top:100px">
+	<h:form id="form">
+	
+	<p:panel id ="panel1" header="Pesquisar Item">
+	<h:panelGrid columns="2">
+		
+		<h:outputText  value="Descrição"/>
+		<p:inputText id="descricao" value="#{itemBean.item.descricao}" />
+		
+		<h:outputText  value="Codigo"/>
+		<p:inputText id="codigo" value="#{itemBean.item.codigo}" />		
+		
+		</h:panelGrid>
+		
+		
+		<p:selectOneRadio value="#{itemBean.tipo}">
+		<f:selectItem itemValue="1" itemLabel="Pizza" />
+		<f:selectItem itemValue="2" itemLabel="Bebida" />
+		<f:selectItem itemValue="3" itemLabel="Sanduiche" />
+		<f:selectItem itemValue="4" itemLabel="Doce" />	
+		</p:selectOneRadio>
+		
+		
+		<p:commandButton id="btn" value="Pesquisar" update="form2" ajax="false" action="#{itemBean.pesquisarItem}"/>
+		</p:panel>
+		</h:form>
+		
+		<h:form id="form2">
+		
+		<p:dataTable id="dataTable" rendered="#{itemBean.render}"  var="item" value="#{itemBean.listaItem}"  
+                 paginator="true" rows="10"  
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 rowsPerPageTemplate="5,10,15">  
+        <f:facet name="header">  
+            Resultado da Pesquisa
+        </f:facet>  
+  
+  
+     <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Codigo" />  
+            </f:facet>  
+            <h:outputText value="#{item.codigo}" />  
+        </p:column>  
+  
+  
+        <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Descrição" />  
+            </f:facet>  
+            <h:outputText value="#{item.descricao}" />  
+        </p:column>  
+        
+        <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Preço" />  
+            </f:facet>  
+            <h:outputText value="#{item.preco}" />  
+        </p:column> 
+  
+        <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Quantidade" />  
+            </f:facet>  
+            <h:outputText value="#{item.quantidade}" />  
+        </p:column>  
+  		
+  		<p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Tipo" />  
+            </f:facet>  
+            <h:outputText value="#{item.tipo}" />  
+        </p:column> 
+        
+        <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Ação" />  
+            </f:facet>
+            
+            <p:commandLink actionListener="#{itemBean.carregarAlteracao}"  ajax="false" action="alterarItem">  
+            <h:outputText value="Inserir" />
+            <f:param id="codigo" name="codigo" value="#{item.codigo}" />
+            </p:commandLink>
+            
+           
+              
+        </p:column>       
+  		    
+    </p:dataTable>
+		
+		
+		
+		</h:form>
+		
+
+		
+		<h:form id="form3">
+		
+		
+		
+		<p:dataTable id="dataPedido" rendered="true" var="compra" value="#{itemBean.listaCompra}">
+		<f:facet name="header"> Itens do pedido</f:facet>
+		
+		 <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Codigo" />  
+            </f:facet>  
+            <h:outputText value="#{compra.codigo}" />  
+        </p:column>  
+  
+  
+        <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Descrição" />  
+            </f:facet>  
+            <h:outputText value="#{compra.descricao}" />  
+        </p:column>  
+        
+        <p:column>  
+            <f:facet name="header">  
+                <h:outputText value="Preço" />  
+            </f:facet>  
+            <h:outputText value="#{compra.valor}" />  
+        </p:column> 
+  		
+		
+		</p:dataTable>
+		
+		
+		
+		
+		
+		
+		</h:form>
+		</div>
+	</h:body>
+</html>

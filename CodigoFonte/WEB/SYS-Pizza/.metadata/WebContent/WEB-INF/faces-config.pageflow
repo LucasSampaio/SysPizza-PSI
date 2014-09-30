@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14112457822540" configfile="/SYS-Pizza/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Menu/menu.xhtml" id="pf14112638531034" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14112638531035 pf14113336891430 pf14113383032253 pf14117671487330 pf14117736843050 pf14117738556803 pf14117739283106 pf14118500721222 pf14119637677733" path="/Menu/menu.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterCliente/cadastrar.xhtml" id="pf14112638531036" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14112638531035" path="/ManterCliente/cadastrar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterFuncionario/cadastrar.xhtml" id="pf14113336891431" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14113336891430" path="/ManterFuncionario/cadastrar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterCliente/pesquisar.xhtml" id="pf14113383032254" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf14113383032253" path="/ManterCliente/pesquisar.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterItem/cadastrarSabor.xhtml" id="pf14117671487331" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf14117671487330" path="/ManterItem/cadastrarSabor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterItem/cadastrarBebida.xhtml" id="pf14117736843051" referenceLink="//@navigationRule.0/@navigationCase.4/@toViewId|" inlinks="pf14117736843050" path="/ManterItem/cadastrarBebida.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterItem/cadastrarSanduiche.xhtml" id="pf14117738556804" referenceLink="//@navigationRule.0/@navigationCase.5/@toViewId|" inlinks="pf14117738556803" path="/ManterItem/cadastrarSanduiche.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterItem/cadastrarDoces.xhtml" id="pf14117739283107" referenceLink="//@navigationRule.0/@navigationCase.6/@toViewId|" inlinks="pf14117739283106" path="/ManterItem/cadastrarDoces.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterItem/pesquisarSabor.xhtml" id="pf14118500721223" referenceLink="//@navigationRule.0/@navigationCase.8/@toViewId|" outlinks="pf14118541418237" inlinks="pf14118500721222" path="/ManterItem/pesquisarSabor.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterItem/alterarItem.xhtml" id="pf14118541418238" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14118541418237" path="/ManterItem/alterarItem.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ManterFuncionario/pesquisar.xhtml" id="pf14119637677734" referenceLink="//@navigationRule.0/@navigationCase.8/@toViewId|" inlinks="pf14119637677733" path="/ManterFuncionario/pesquisar.xhtml"/>
+  <links id="pf14112638531035" target="pf14112638531036" source="pf14112638531034" outcome="cadastrarCliente"/>
+  <links id="pf14113336891430" target="pf14113336891431" source="pf14112638531034" outcome="cadastrarFuncionario"/>
+  <links id="pf14113383032253" target="pf14113383032254" source="pf14112638531034" outcome="prepararPesquisa"/>
+  <links id="pf14117671487330" target="pf14117671487331" source="pf14112638531034" outcome="cadastrarSabor"/>
+  <links id="pf14117736843050" target="pf14117736843051" source="pf14112638531034" outcome="cadastrarBebida"/>
+  <links id="pf14117738556803" target="pf14117738556804" source="pf14112638531034" outcome="cadastrarSanduiche"/>
+  <links id="pf14117739283106" target="pf14117739283107" source="pf14112638531034" outcome="cadastrarDoce"/>
+  <links id="pf14118500721222" target="pf14118500721223" source="pf14112638531034" outcome="prepararPesquisaItem"/>
+  <links id="pf14118541418237" target="pf14118541418238" source="pf14118500721223" outcome="alterarItem"/>
+  <links id="pf14119637677733" target="pf14119637677734" source="pf14112638531034" outcome="pesquisarFuncionario"/>
+</pageflow:Pageflow>

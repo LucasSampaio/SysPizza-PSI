@@ -16,26 +16,26 @@
 	<div align="center" style="margin-top:100px">
 	<h:form id="form">
 	
-	<p:panel id ="panel1" header="Pesquisar Cliente">
+	<p:panel id ="panel1" header="Pesquisar Funcionario">
 	<h:panelGrid columns="2">
 		
 		<h:outputText  value="Nome"/>
-		<p:inputText id="nome" value="#{clienteBean.cliente.nome}" />
+		<p:inputText id="nome" value="#{funcionarioBean.funcionario.nome}" />
 		
 		<h:outputText  value="Cpf"/>
-		<p:inputText id="cpf" value="#{clienteBean.cliente.cpf}" />
+		<p:inputText id="cpf" value="#{funcionarioBean.funcionario.cpf}" />
 		
 		
 		
 		</h:panelGrid>
 		
-		<p:commandButton id="btn" value="Pesquisar" update="form2" ajax="false" action="#{clienteBean.pesquisar}"/>
+		<p:commandButton id="btn" value="Pesquisar" update="form2" ajax="false" action="#{funcionarioBean.pesquisar}"/>
 		</p:panel>
 		</h:form>
 		
 		<h:form id="form2">
 		
-		<p:dataTable id="dataTable" rendered="#{clienteBean.render}"  var="cli" value="#{clienteBean.listaCliente}"  
+		<p:dataTable id="dataTable" rendered="#{funcionarioBean.render}"  var="funcionario" value="#{funcionarioBean.listaFuncionario}"  
                  paginator="true" rows="10"  
                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
                  rowsPerPageTemplate="5,10,15">  
@@ -47,28 +47,28 @@
             <f:facet name="header">  
                 <h:outputText value="Nome" />  
             </f:facet>  
-            <h:outputText value="#{cli.nome}" />  
+            <h:outputText value="#{funcionario.nome}" />  
         </p:column>  
         
         <p:column>  
             <f:facet name="header">  
                 <h:outputText value="RG" />  
             </f:facet>  
-            <h:outputText value="#{cli.rg}" />  
+            <h:outputText value="#{funcionario.rg}" />  
         </p:column> 
   
         <p:column>  
             <f:facet name="header">  
                 <h:outputText value="Telefone" />  
             </f:facet>  
-            <h:outputText value="#{cli.telefone}" />  
+            <h:outputText value="#{funcionario.telefone}" />  
         </p:column>  
   		
   		<p:column>  
             <f:facet name="header">  
                 <h:outputText value="Cpf" />  
             </f:facet>  
-            <h:outputText value="#{cli.cpf}" />  
+            <h:outputText value="#{funcionario.cpf}" />  
         </p:column>       
   		    
     </p:dataTable>
