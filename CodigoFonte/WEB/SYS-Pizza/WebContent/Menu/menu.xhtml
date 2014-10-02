@@ -31,6 +31,12 @@
  
  </p:submenu>
  
+  <p:submenu label="Pesquisar">
+ <p:menuitem value="EfetuarPedido" ajax="false" action="#{itemBean.prepararPedido}"/>
+ 
+ 
+ </p:submenu>
+ 
   <p:submenu label="Cadastrar Item">
  <p:menuitem value="Sabor" ajax="false" action="#{itemBean.prepararCadastro}"/>
  <p:menuitem value="Bebida" ajax="false" action="#{itemBean.prepararCadastroBebida}"/>

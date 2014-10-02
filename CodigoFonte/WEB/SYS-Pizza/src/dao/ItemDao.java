@@ -9,12 +9,16 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import negocio.Cliente;
+import negocio.Compra;
 import negocio.Item;
+import negocio.Pedido;
 
 public class ItemDao {
 	
 	private Item item;
 	private List<Item> lista;
+	private Pedido pedido;
+	private Compra compra;
 	
 	
 	public String salvar(Item item){
@@ -29,6 +33,29 @@ public class ItemDao {
 		factory.close();
 		
 		return "voltar";
+	}
+	
+	public String salvarPedidoCompra(List<Compra> listaCompra, Pedido pedido, Compra compra){
+		
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("novo");
+		EntityManager manager = factory.createEntityManager();
+		manager.getTransaction().begin();
+		
+		
+		manager.persist(pedido);
+		manager.getTransaction().commit();
+		
+		for(Compra c: listaCompra){
+			c.setPedido(pedido);
+			manager.persist(c);
+			manager.getTransaction().commit();
+			
+		}
+		
+		manager.close();
+		factory.close();
+		
+		return "voltarPedido";
 	}
 	
 	public String alterar(Item item){
@@ -285,6 +312,22 @@ public class ItemDao {
 
 	public void setLista(List<Item> lista) {
 		this.lista = lista;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
+	public Compra getCompra() {
+		return compra;
+	}
+
+	public void setCompra(Compra compra) {
+		this.compra = compra;
 	}
 
 }

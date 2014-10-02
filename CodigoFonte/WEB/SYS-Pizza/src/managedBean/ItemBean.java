@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import dao.ItemDao;
 import negocio.Compra;
 import negocio.Item;
+import negocio.Pedido;
 
 
 @SuppressWarnings("serial")
@@ -30,6 +31,7 @@ public class ItemBean implements java.io.Serializable {
 	private List<Compra> listaCompra;
 	private ItemDao itemDao;
 	private Compra compra;
+	private Pedido pedido;
 	private Boolean render;
 	private Boolean sessao = true;
 	
@@ -152,6 +154,26 @@ public class ItemBean implements java.io.Serializable {
 		
 	}
 	
+	public void carregarCompra(){
+		
+		requestParam = (Map) FacesContext.getCurrentInstance().getApplication().createValueBinding("#{param}").getValue(FacesContext.getCurrentInstance());
+		String codigo = (String)requestParam.get("codigo");
+		item = new ItemDao().pesquisarSaborPorCodigo(new Integer(codigo));
+		
+		compra.setDescricao(item.getDescricao());
+		compra.setValor(item.getPreco());
+		compra.setItem(item);
+		
+		listaCompra.add(compra);
+		
+	}
+	
+	public void salvarPedido(){
+		
+		itemDao.salvarPedidoCompra(listaCompra, pedido, compra);
+		
+	}
+	
 	public String prepararCadastro(){
 		limparObjeto();
 		return "cadastrarSabor";
@@ -262,6 +284,16 @@ public class ItemBean implements java.io.Serializable {
 
 	public void setListaCompra(List<Compra> listaCompra) {
 		this.listaCompra = listaCompra;
+	}
+
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 
 }

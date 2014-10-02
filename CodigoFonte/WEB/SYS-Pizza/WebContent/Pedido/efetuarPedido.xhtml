@@ -16,7 +16,7 @@
 	<div align="center" style="margin-top:100px">
 	<h:form id="form">
 	
-	<p:panel id ="panel1" header="Pesquisar Item">
+	<p:panel id ="panel1" header="Efetuar Pedido">
 	<h:panelGrid columns="2">
 		
 		<h:outputText  value="Descrição"/>
@@ -92,7 +92,7 @@
                 <h:outputText value="Ação" />  
             </f:facet>
             
-            <p:commandLink actionListener="#{itemBean.carregarAlteracao}"  ajax="false" action="alterarItem">  
+            <p:commandLink actionListener="#{itemBean.carregarCompra}" update="form3"  ajax="false" action="nada">  
             <h:outputText value="Inserir" />
             <f:param id="codigo" name="codigo" value="#{item.codigo}" />
             </p:commandLink>
