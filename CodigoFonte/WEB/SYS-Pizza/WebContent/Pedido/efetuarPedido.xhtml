@@ -111,7 +111,19 @@
 		
 		<h:form id="form3">
 		
+		<h:panelGrid columns="2">
 		
+		<h:outputText value="Endereco de entrega "/>
+		<p:inputText id="pedidoEndereco" value="#{itemBean.pedido.endereco}" />
+		
+		<h:outputText value="Forma Pagamento: "/>
+		<p:selectOneMenu value="#{itemBean.formaPgt.codigo}" onchange="submit();"> 
+		<f:selectItems value="#{itemBean.listaPagamento}" />
+		</p:selectOneMenu>
+		
+		
+		</h:panelGrid>
+			
 		
 		<p:dataTable id="dataPedido" rendered="true" var="compra" value="#{itemBean.listaCompra}">
 		<f:facet name="header"> Itens do pedido</f:facet>

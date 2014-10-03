@@ -11,12 +11,15 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 
 
+import javax.faces.model.SelectItem;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import dao.ItemDao;
+import dao.PagamentoDao;
 import negocio.Compra;
+import negocio.FormaPgt;
 import negocio.Item;
 import negocio.Pedido;
 
@@ -32,8 +35,11 @@ public class ItemBean implements java.io.Serializable {
 	private ItemDao itemDao;
 	private Compra compra;
 	private Pedido pedido;
+	private FormaPgt formaPgt;
+	private PagamentoDao pagamentoDao;
 	private Boolean render;
 	private Boolean sessao = true;
+	private List<SelectItem> listaPagamento;
 	
 	private Long tipo;
 	
@@ -59,13 +65,28 @@ public class ItemBean implements java.io.Serializable {
 	
 	
 	public void limparObjeto(){
-		
+		setFormaPgt(new FormaPgt());
 		setItem(new Item());
+		setListaPagamento(new ArrayList<SelectItem>());
 		setListaItem(new ArrayList<Item>());
 		setListaCompra(new ArrayList<Compra>());
+		setPedido(new Pedido());
 		setCompra(new Compra());
+		setPagamentoDao(new PagamentoDao());
 		setItemDao(new ItemDao());
 		
+	}
+	
+	public void carregarPagamento(){
+		
+		List<FormaPgt> listaTmpPagamento = pagamentoDao.pesquisar();
+		
+		for (FormaPgt f: listaTmpPagamento){
+			
+			
+			getListaPagamento().add(new SelectItem(f.getCodigo(), f.getDescricao()));
+			System.out.println("Descricao :"+ f.getDescricao());
+		}
 	}
 	
 	public String prepararPesquisa(){
@@ -79,6 +100,8 @@ public class ItemBean implements java.io.Serializable {
 	public String prepararPedido(){
 		
 		limparObjeto();
+		carregarPagamento();
+		
 		
 		
 		return "prepararPedido";
@@ -294,6 +317,36 @@ public class ItemBean implements java.io.Serializable {
 
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
+	}
+
+
+	public FormaPgt getFormaPgt() {
+		return formaPgt;
+	}
+
+
+	public void setFormaPgt(FormaPgt formaPgt) {
+		this.formaPgt = formaPgt;
+	}
+
+
+	public List<SelectItem> getListaPagamento() {
+		return listaPagamento;
+	}
+
+
+	public void setListaPagamento(List<SelectItem> listaPagamento) {
+		this.listaPagamento = listaPagamento;
+	}
+
+
+	public PagamentoDao getPagamentoDao() {
+		return pagamentoDao;
+	}
+
+
+	public void setPagamentoDao(PagamentoDao pagamentoDao) {
+		this.pagamentoDao = pagamentoDao;
 	}
 
 }
