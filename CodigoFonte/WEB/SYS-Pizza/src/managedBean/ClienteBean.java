@@ -9,6 +9,7 @@ import javax.faces.bean.SessionScoped;
 import dao.ClienteDao;
 import negocio.Cliente;
 import negocio.Funcionario;
+import negocio.Usuario;
 
 @SuppressWarnings("serial")
 @SessionScoped
@@ -18,6 +19,7 @@ public class ClienteBean implements java.io.Serializable {
 	private Cliente cliente;
 	private Funcionario funcionario;
 	private ClienteDao clienteDao;
+	private Usuario usuario;
 	private List<Cliente> listaCliente;
 	private Boolean render;
 	
@@ -43,7 +45,7 @@ public class ClienteBean implements java.io.Serializable {
 	}
 	
 	public void limparObjeto(){
-		
+		setUsuario(new Usuario());
 		setCliente(new Cliente());
 		setFuncionario(new Funcionario());
 		setClienteDao(new ClienteDao());
@@ -52,7 +54,7 @@ public class ClienteBean implements java.io.Serializable {
 	
 	public void salvar(){
 		
-		clienteDao.salvar(cliente);
+		clienteDao.salvar(cliente, usuario);
 		
 		limparObjeto();
 	}
@@ -110,6 +112,14 @@ public class ClienteBean implements java.io.Serializable {
 
 	public void setRender(Boolean render) {
 		this.render = render;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }
