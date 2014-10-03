@@ -32,16 +32,19 @@ public class ItemBean implements java.io.Serializable {
 	private Item item;
 	private List<Item> listaItem;
 	private List<Compra> listaCompra;
+	private List<Pedido> listaPedido;
 	private ItemDao itemDao;
 	private Compra compra;
 	private Pedido pedido;
 	private FormaPgt formaPgt;
 	private PagamentoDao pagamentoDao;
 	private Boolean render;
+	private Boolean renderPedido;
 	private Boolean sessao = true;
 	private List<SelectItem> listaPagamento;
 	
 	private Long tipo;
+	private Long tipoPedido;
 	
 	Map requestParam;
 	HttpSession sessionScope;
@@ -70,6 +73,7 @@ public class ItemBean implements java.io.Serializable {
 		setListaPagamento(new ArrayList<SelectItem>());
 		setListaItem(new ArrayList<Item>());
 		setListaCompra(new ArrayList<Compra>());
+		setListaPedido(new ArrayList<Pedido>());
 		setPedido(new Pedido());
 		setCompra(new Compra());
 		setPagamentoDao(new PagamentoDao());
@@ -137,6 +141,32 @@ public class ItemBean implements java.io.Serializable {
 		
 	}
 	
+	public void pesquisarPedido(){
+		if (tipoPedido ==1){
+			renderPedido =true;
+			setListaPedido(getItemDao().pesquisarPedidoAtivo(pedido));
+		}
+		
+		else if(tipoPedido ==2){
+			
+			renderPedido = true;
+		}
+		
+		
+	}
+	
+	public void baixarPedido(){
+		requestParam = (Map) FacesContext.getCurrentInstance().getApplication().createValueBinding("#{param}").getValue(FacesContext.getCurrentInstance());
+		String codigo = (String)requestParam.get("codigo");
+		pedido = new ItemDao().pesquisarPedidoPorCodigo(new Integer(codigo));
+		
+		pedido.setStatus((long) 2);
+		
+		
+	}
+	
+	
+	
 	public void carregarItem(Item item){
 		
 		this.item = item;
@@ -191,11 +221,11 @@ public class ItemBean implements java.io.Serializable {
 		
 	}
 	
-	public void salvarPedido(){
+	public String salvarPedido(){
 		pedido.setStatus((long) 1);
 		pedido.setFormaPgt(formaPgt);
 		itemDao.salvarPedidoCompra(listaCompra, pedido, compra);
-		
+		return"confirmarPedido";
 	}
 	
 	public String prepararCadastro(){
@@ -348,6 +378,36 @@ public class ItemBean implements java.io.Serializable {
 
 	public void setPagamentoDao(PagamentoDao pagamentoDao) {
 		this.pagamentoDao = pagamentoDao;
+	}
+
+
+	public Long getTipoPedido() {
+		return tipoPedido;
+	}
+
+
+	public void setTipoPedido(Long tipoPedido) {
+		this.tipoPedido = tipoPedido;
+	}
+
+
+	public List<Pedido> getListaPedido() {
+		return listaPedido;
+	}
+
+
+	public void setListaPedido(List<Pedido> listaPedido) {
+		this.listaPedido = listaPedido;
+	}
+
+
+	public Boolean getRenderPedido() {
+		return renderPedido;
+	}
+
+
+	public void setRenderPedido(Boolean renderPedido) {
+		this.renderPedido = renderPedido;
 	}
 
 }

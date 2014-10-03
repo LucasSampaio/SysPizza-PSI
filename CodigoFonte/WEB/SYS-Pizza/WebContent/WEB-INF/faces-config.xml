@@ -72,5 +72,14 @@
     </navigation-case>
     
     </navigation-rule>
+    
+    <navigation-rule>
+    <from-view-id>/Pedido/efetuarPedido.xhtml</from-view-id>
+     <navigation-case>
+    <from-outcome>confirmarPedido</from-outcome>
+    <to-view-id>/Pedido/confirmarPedido.xhtml</to-view-id>
+    </navigation-case>
+    
+    </navigation-rule>
 
 </faces-config>

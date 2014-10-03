@@ -8,16 +8,10 @@
 	
 	<f:view contentType="text/html"/>
 	<h:head>
-	<title>SysPizza</title>
+	<title>SYS</title>
 	</h:head>
-	
+	<h:outputText value="Sistema SYS-Pizza" />
 	<h:body align="center">
-	
-	<div align="center">
-		<h:graphicImage library="imagens" name="logo.png" 
-						id="imagem" style=" width: 550px;" />
-						<f:view contentType="text/html"/>
-	</div>
 	
 	<div align="center" style="margin-top:100px">
 	<h:form id="form">
@@ -98,7 +92,7 @@
                 <h:outputText value="Ação" />  
             </f:facet>
             
-            <p:commandLink actionListener="#{itemBean.carregarCompra}" update="form3"  ajax="false" action="nada">  
+            <p:commandLink actionListener="#{itemBean.carregarCompra}" update="form3"  ajax="false" >  
             <h:outputText value="Inserir" />
             <f:param id="codigo" name="codigo" value="#{item.codigo}" />
             </p:commandLink>

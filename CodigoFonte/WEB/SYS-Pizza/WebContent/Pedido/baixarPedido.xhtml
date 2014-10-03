@@ -16,33 +16,30 @@
 	<div align="center" style="margin-top:100px">
 	<h:form id="form">
 	
-	<p:panel id ="panel1" header="Pesquisar Item">
+	<p:panel id ="panel1" header="Baixar Pedido">
 	<h:panelGrid columns="2">
 		
-		<h:outputText  value="Descrição"/>
-		<p:inputText id="descricao" value="#{itemBean.item.descricao}" />
 		
 		<h:outputText  value="Codigo"/>
-		<p:inputText id="codigo" value="#{itemBean.item.codigo}" />		
+		<p:inputText id="codigo" value="#{itemBean.pedido.codigo}" />		
 		
 		</h:panelGrid>
 		
 		
-		<p:selectOneRadio value="#{itemBean.tipo}">
-		<f:selectItem itemValue="1" itemLabel="Pizza" />
-		<f:selectItem itemValue="2" itemLabel="Bebida" />
-		<f:selectItem itemValue="3" itemLabel="Sanduiche" />
-		<f:selectItem itemValue="4" itemLabel="Doce" />	
+		<p:selectOneRadio value="#{itemBean.tipoPedido}">
+		<f:selectItem itemValue="1" itemLabel="Ativo" />
+		<f:selectItem itemValue="2" itemLabel="Baixado" />
+
 		</p:selectOneRadio>
 		
 		
-		<p:commandButton id="btn" value="Pesquisar" update="form2" ajax="false" action="#{itemBean.pesquisarItem}"/>
+		<p:commandButton id="btn" value="Pesquisar" update="form2" ajax="false" action="#{itemBean.pesquisarPedido}"/>
 		</p:panel>
 		</h:form>
 		
 		<h:form id="form2">
 		
-		<p:dataTable id="dataTable" rendered="#{itemBean.render}"  var="item" value="#{itemBean.listaItem}"  
+		<p:dataTable id="dataTable" rendered="#{itemBean.renderPedido}"  var="pedido" value="#{itemBean.listaPedido}"  
                  paginator="true" rows="10"  
                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
                  rowsPerPageTemplate="5,10,15">  
@@ -55,37 +52,24 @@
             <f:facet name="header">  
                 <h:outputText value="Codigo" />  
             </f:facet>  
-            <h:outputText value="#{item.codigo}" />  
+            <h:outputText value="#{pedido.codigo}" />  
         </p:column>  
   
   
         <p:column>  
             <f:facet name="header">  
-                <h:outputText value="Descrição" />  
+                <h:outputText value="Status" />  
             </f:facet>  
-            <h:outputText value="#{item.descricao}" />  
+            <h:outputText value="#{pedido.status}" />  
         </p:column>  
         
         <p:column>  
             <f:facet name="header">  
-                <h:outputText value="Preço" />  
+                <h:outputText value="Endereço" />  
             </f:facet>  
-            <h:outputText value="#{item.preco}" />  
+            <h:outputText value="#{pedido.endereco}" />  
         </p:column> 
   
-        <p:column>  
-            <f:facet name="header">  
-                <h:outputText value="Quantidade" />  
-            </f:facet>  
-            <h:outputText value="#{item.quantidade}" />  
-        </p:column>  
-  		
-  		<p:column>  
-            <f:facet name="header">  
-                <h:outputText value="Tipo" />  
-            </f:facet>  
-            <h:outputText value="#{item.tipo}" />  
-        </p:column> 
         
         <p:column>  
             <f:facet name="header">  
@@ -94,7 +78,7 @@
             
             <p:commandLink actionListener="#{itemBean.carregarAlteracao}"  ajax="false" action="alterarItem">  
             <h:outputText value="Editar" />
-            <f:param id="codigo" name="codigo" value="#{item.codigo}" />
+            <f:param id="codigo" name="codigo" value="#{pedido.codigo}" />
             </p:commandLink>
             
            
