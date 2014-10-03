@@ -192,7 +192,8 @@ public class ItemBean implements java.io.Serializable {
 	}
 	
 	public void salvarPedido(){
-		
+		pedido.setStatus((long) 1);
+		pedido.setFormaPgt(formaPgt);
 		itemDao.salvarPedidoCompra(listaCompra, pedido, compra);
 		
 	}

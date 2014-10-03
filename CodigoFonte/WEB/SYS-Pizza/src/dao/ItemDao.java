@@ -44,16 +44,23 @@ public class ItemDao {
 		
 		manager.persist(pedido);
 		manager.getTransaction().commit();
+		manager.close();
+		factory.close();
 		
 		for(Compra c: listaCompra){
+			
+			factory = Persistence.createEntityManagerFactory("novo");
+			manager = factory.createEntityManager();
+			manager.getTransaction().begin();
+			
 			c.setPedido(pedido);
 			manager.persist(c);
 			manager.getTransaction().commit();
+			manager.close();
+			factory.close();
 			
 		}
 		
-		manager.close();
-		factory.close();
 		
 		return "voltarPedido";
 	}

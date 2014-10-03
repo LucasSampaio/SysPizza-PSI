@@ -48,6 +48,12 @@ public class Pedido {
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+	public FormaPgt getFormaPgt() {
+		return formaPgt;
+	}
+	public void setFormaPgt(FormaPgt formaPgt) {
+		this.formaPgt = formaPgt;
 	}	
 
 }
