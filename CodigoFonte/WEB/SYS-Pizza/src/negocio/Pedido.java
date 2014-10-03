@@ -13,7 +13,7 @@ public class Pedido {
 	private Long codigo;
 	private Long status;
 	private String endereco;
-	private Date data;
+	private Date data = new Date();
 	@ManyToOne
 	private Cliente cliente;
 	@OneToOne
