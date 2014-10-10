@@ -1,6 +1,0 @@
-package br.com.syspizza;
-
-public class Autenticacao {
-	String login;
-	String senha;
-}

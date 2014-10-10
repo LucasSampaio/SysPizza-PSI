@@ -70,8 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
-        android:text="PIZZA ESCOLHIDA" />
+        android:layout_toRightOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/TextView01"
@@ -87,8 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/TextView01"
-        android:layout_toRightOf="@+id/TextView01"
-        android:text="BEBIDA ESCOLHIDA" />
+        android:layout_toRightOf="@+id/TextView01" />
 
     <TextView
         android:id="@+id/textView4"
@@ -105,8 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView4"
         android:layout_alignBottom="@+id/textView4"
-        android:layout_alignLeft="@+id/tvPizzaPedida"
-        android:text="DOCE ESCOHLIDO" />
+        android:layout_alignLeft="@+id/tvPizzaPedida" />
 
     <TextView
         android:id="@+id/textView5"
@@ -114,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView4"
-        android:text="Sandúiche:"
+        android:text="Sanduíche:"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -123,8 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView5"
         android:layout_alignBottom="@+id/textView5"
-        android:layout_toRightOf="@+id/textView5"
-        android:text="SAND. ESCOHIDO" />
+        android:layout_toRightOf="@+id/textView5" />
 
     <Button
         android:id="@+id/btAlterarItem"

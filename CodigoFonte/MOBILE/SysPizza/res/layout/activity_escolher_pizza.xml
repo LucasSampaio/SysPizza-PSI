@@ -14,13 +14,28 @@
         android:text="Escolher o sabor da pizza"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <Spinner
+        android:id="@+id/spEscolherPizza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvTeste"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvTeste"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="26dp"
         android:text="Sabor da pizza" />
+
+    <Button
+        android:id="@+id/btAdicionarPedidoPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spEscolherPizza"
+        android:text="Adicionar ao pedido" />
 
 </RelativeLayout>
