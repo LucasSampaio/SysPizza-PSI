@@ -1530,3 +1530,6 @@ Caused by: java.net.SocketTimeoutException: connect timed out
 	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:167)
 	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:459)
 	... 13 more
+
+!ENTRY org.eclipse.ui 2 2 2014-10-10 19:35:21.063
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
