@@ -79,6 +79,8 @@ public class ItemBean implements java.io.Serializable {
 		setPagamentoDao(new PagamentoDao());
 		setItemDao(new ItemDao());
 		
+		//
+		
 	}
 	
 	public void carregarPagamento(){
@@ -109,6 +111,14 @@ public class ItemBean implements java.io.Serializable {
 		
 		
 		return "prepararPedido";
+	}
+	
+	public String prepararBaixarPedido(){
+		
+		limparObjeto();
+		renderPedido = false;
+		
+		return"prepararBaixarPedido";
 	}
 	
 	public void cadastrarItem(){
@@ -161,6 +171,8 @@ public class ItemBean implements java.io.Serializable {
 		pedido = new ItemDao().pesquisarPedidoPorCodigo(new Integer(codigo));
 		
 		pedido.setStatus((long) 2);
+		
+		itemDao.baixarPedido(pedido);
 		
 		
 	}

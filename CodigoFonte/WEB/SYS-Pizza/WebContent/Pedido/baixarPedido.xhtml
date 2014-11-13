@@ -76,8 +76,8 @@
                 <h:outputText value="Ação" />  
             </f:facet>
             
-            <p:commandLink actionListener="#{itemBean.carregarAlteracao}"  ajax="false" action="alterarItem">  
-            <h:outputText value="Editar" />
+            <p:commandLink actionListener="#{itemBean.baixarPedido}"  ajax="false" action="nada">  
+            <h:outputText value="Baixar" />
             <f:param id="codigo" name="codigo" value="#{pedido.codigo}" />
             </p:commandLink>
             

@@ -33,6 +33,7 @@
  
   <p:submenu label="Pedido">
  <p:menuitem value="EfetuarPedido" ajax="false" action="#{itemBean.prepararPedido}"/>
+ <p:menuitem value="Baixar Pedido" ajax="false" action="#{itemBean.prepararBaixarPedido}"/>
  
  
  </p:submenu>
@@ -70,7 +71,8 @@
 		<p:inputText id="login" value="#{usuarioBean.usuario.login}" />
 		
 		<h:outputText  value="Senha: "/>
-		<p:inputText id="senha" value="#{usuarioBean.usuario.senha}" />
+		
+		<p:password id="senha2" value="#{usuarioBean.usuario.senha}"/>
 		
 		
 		

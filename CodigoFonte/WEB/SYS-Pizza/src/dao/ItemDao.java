@@ -81,7 +81,21 @@ public class ItemDao {
 	}
 	
 	
-	
+	public String baixarPedido(Pedido pedido){
+		
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("novo");
+		EntityManager manager = factory.createEntityManager();
+		manager.getTransaction().begin();
+		
+		manager.merge(pedido);
+		manager.getTransaction().commit();
+		manager.close();
+		factory.close();
+		
+		//
+		
+		return"nada";
+	}
 	
 	
 	
