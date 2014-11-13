@@ -92,7 +92,7 @@ public class ItemDao {
 		manager.close();
 		factory.close();
 		
-		//
+		
 		
 		return"nada";
 	}

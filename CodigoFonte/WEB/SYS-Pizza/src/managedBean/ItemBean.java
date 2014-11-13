@@ -79,7 +79,7 @@ public class ItemBean implements java.io.Serializable {
 		setPagamentoDao(new PagamentoDao());
 		setItemDao(new ItemDao());
 		
-		//
+	
 		
 	}
 	
