@@ -50,7 +50,7 @@ public class ClienteBean implements java.io.Serializable {
 		setFuncionario(new Funcionario());
 		setClienteDao(new ClienteDao());
 		setListaCliente(new ArrayList<Cliente>());
-		//ok
+		
 	}
 	
 	public void salvar(){
