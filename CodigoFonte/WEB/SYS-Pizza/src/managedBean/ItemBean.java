@@ -225,11 +225,17 @@ public class ItemBean implements java.io.Serializable {
 		String codigo = (String)requestParam.get("codigo");
 		item = new ItemDao().pesquisarSaborPorCodigo(new Integer(codigo));
 		
+		setCompra(new Compra());
 		compra.setDescricao(item.getDescricao());
 		compra.setValor(item.getPreco());
 		compra.setItem(item);
 		
 		listaCompra.add(compra);
+		
+		for(Compra c : listaCompra){
+			
+			System.out.println(" nome: "+c.getDescricao());
+		}
 		
 	}
 	
